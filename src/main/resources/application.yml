@@ -5,6 +5,6 @@ spring:
   ai:
     ollama:
       embedding:
-        model: "llama2"
+        model: "gemma"
       chat:
-        model: "llama2"
+        model: "gemma"
