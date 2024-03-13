@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: example-spring-ai
+
+  ai:
+    ollama:
+      embedding:
+        model: "llama2"
+      chat:
+        model: "llama2"
