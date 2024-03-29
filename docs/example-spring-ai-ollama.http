@@ -2,7 +2,10 @@ GET http://127.0.0.1:8080/ai/generate-prompt
 
 ###
 
+GET http://127.0.0.1:8080/ai/generate-new
 
-GET http://127.0.0.1:8080/ai/generate-prompt?userMessage=你是谁&systemMessage=需要展示你诞生多久
+###
+
+GET http://127.0.0.1:8080/ai/generate-prompt?userMessage=2022世界杯在哪儿举行&systemMessage=你是一个非常实用的 AI 助手
 
 ###

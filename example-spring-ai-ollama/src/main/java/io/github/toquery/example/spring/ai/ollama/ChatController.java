@@ -29,6 +29,15 @@ public class ChatController {
         return Map.of("generation", chatClient.call(message));
     }
 
+    @GetMapping("/ai/generate-new")
+    public Map generateNew() {
+        List<Message> messages = List.of(new SystemMessage("你是一个非常实用的 AI 助手"),
+                new UserMessage("2022世界杯在哪儿举行？"),
+                new AssistantMessage("2022年世界杯将在卡塔尔举行。"),
+                new UserMessage("冠军是谁？"));
+        return Map.of("generation", chatClient.call(new Prompt(messages)));
+    }
+
     @GetMapping("/ai/generate-prompt")
     public Map generatePrompt(@RequestParam(value = "userMessage", defaultValue = "Tell me a joke") String userMessage,
                               @RequestParam(value = "assistantMessage", required = false) String assistantMessage,
